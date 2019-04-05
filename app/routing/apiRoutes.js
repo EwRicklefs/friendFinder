@@ -1,10 +1,7 @@
-//Data
 
+//Data
 var friendData = require('../data/friends')
 
-
-
-//TODO: make this code work for my shit
 module.exports = function(app) {
     // API GET Requests
     // Below code handles when users "visit" a page.
@@ -20,8 +17,25 @@ module.exports = function(app) {
     // ---------------------------------------------------------------------------
   
     app.post("/api/friends", function(req, res) {
-        //TODO: Friend selection logic goes here
-        //also add to friends.js
+        var currFriend = req.body.vals
+        var bestCompatIndex = 0
+        var bestCompatVal = 100
+        for (var i = 0; i<friendData.length; i++) {
+          var totalCompat = 0
+          var compArr = friendData[i].vals
+          for (var j = 0; j<10; j++) {
+            var curFVal = parseInt(currFriend[j])
+            var compFVal = parseInt(compArr[j])
+            totalCompat += Math.abs(curFVal - compFVal)
+          }
+          if (bestCompatVal > totalCompat) {
+            bestCompatVal = totalCompat
+            bestCompatIndex = i
+          }
+        }
+        //modal display trigger goes here
+        res.json(friendData[bestCompatIndex])
+        friendData.push(req.body)
     });
   };
   

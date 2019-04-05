@@ -1,34 +1,13 @@
 
 //TODO: hardcode some example friends into this list.
-var friends = []
+var friends = [
+    {name: 'Toad',
+    url: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Toad_3D_Land.png/220px-Toad_3D_Land.png',
+    vals: [ '2', '4', '1', '5', '3', '4', '2', '3', '5', '1' ]},
+    {name: 'Yoshi',
+    url: 'https://media.nintendo.com/nintendo/bin/cSlgq-nuuEv1f_OKJ4-E2owM4a_R9WgG/Yb50gfeGgNUIrsjtcFB8RnoEJ4JWi5JY.png',
+    vals: [ '3', '3', '3', '3', '3', '3', '3', '3', '3', '3' ]}
+]
 
-// $('form').submit(false);
-
-//       //submit button functionality
-// $('#submit').on('click', ()=> {
-//     if($('#name').val() && $('#url').val()) {
-//         var newArr = []
-//         newArr.push($("#q1").val())
-//         newArr.push($("#q2").val())
-//         newArr.push($("#q3").val())
-//         newArr.push($("#q4").val())
-//         newArr.push($("#q5").val())
-//         newArr.push($("#q6").val())
-//         newArr.push($("#q7").val())
-//         newArr.push($("#q8").val())
-//         newArr.push($("#q9").val())
-//         newArr.push($("#q10").val())
-//         var nameVal = $('#name').val()
-//         var imgUrl = $('#url').val()
-//         var newObj = {
-//             name: nameVal,
-//             url: imgUrl,
-//             vals: newArr
-//         }
-//         friends.push(newObj)
-//     } else {
-//         $('#errModal').modal('show')
-//     }
-// })
 
 module.exports = friends;
