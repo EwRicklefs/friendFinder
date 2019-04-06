@@ -33,7 +33,6 @@ module.exports = function(app) {
             bestCompatIndex = i
           }
         }
-        //modal display trigger goes here
         res.json(friendData[bestCompatIndex])
         friendData.push(req.body)
     });

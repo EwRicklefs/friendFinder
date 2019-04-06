@@ -4,3 +4,8 @@
 .jumbotron {
     padding:15px;
 }
+
+body {
+    background-image: url('app/positive.png');
+    background-color:red;
+}
